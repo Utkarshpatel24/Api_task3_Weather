@@ -1,0 +1,73 @@
+<div class="container bg-secondary  text-center fs-1" style="padding:10px ;" >
+    <div class="search">
+        <div class="row">
+            <form action="" method="post" >
+                <input class="rounded-pill text-center" type="text" name="book" placeholder="search location here!!!!">
+                <button type="submit" class="btn btn-primary rounded-pill fs-2 ">Search</button>
+            </form>
+           
+           
+        </div>
+    </div>
+</div>
+
+
+<?php
+
+if (count($details) > 0) {
+    ?>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+        <tr>
+            
+            <th style="text-align: center;" class="fs-3">Location</th>
+            
+        </tr>
+        </thead>
+        <tfoot>
+        <tr>
+            <td colspan="3">Users quantity: <?php echo count($details)?> </td>
+        </tr>
+        </tfoot>
+        <tbody>
+        <?php foreach ($details as $detail) { ?>
+            <tr>
+                <td><div class="product-content product-wrap clearfix">
+		      <div class="row">
+				<!-- <div class="col-md-5 col-sm-12 col-xs-12">
+					<div class="product-image"> 
+						<img src="https://covers.openlibrary.org/b/olid/<?php echo $book->cover_edition_key;?>-M.jpg" alt="194x228" class="img-responsive" width="90px" height="90px"> 
+						 
+					</div>
+				</div> -->
+				<div class="col-md-7 col-sm-12 col-xs-12">
+				<div class="product-deatil font-italic">
+						<h5 class="name">
+							<a href="/api/currentLocation/<?php echo $detail['name'] ?>">
+								<?php echo $detail['name'] ?> 
+							</a>
+						</h5>
+						
+				</div>
+				<div class="description">
+					</p>
+				</div>
+			
+			</div>
+		</div>
+	</div></td>
+                
+            </tr>
+        <?php } ?>
+        </tbody>
+    </table>
+    <?php
+}
+
+?>
+
+
+<?php
+// echo "<pre>";
+// print_r($details);
+?>

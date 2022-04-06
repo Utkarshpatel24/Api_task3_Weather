@@ -1,0 +1,95 @@
+<?php
+
+if (1) {
+?>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-light">
+            <tr>
+
+                <th style="text-align: center;" class="fs-3">Current Weather Information</th>
+
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php { ?>
+                <tr>
+                    <td>
+                        <h5 class="name font-italic">
+                            <a href="/api/information/<?php echo $name ?>/<?php echo "current" ?>/1">
+                                Current Weather
+                            </a>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5 class="name font-italic">
+                            <a href="/api/information/<?php echo $name; ?>/<?php echo "forecast" ?>/2/<?php echo date('Y-m-d', strtotime("+1 days")); ?>">
+                                Forecast
+                            </a>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5 class="name font-italic">
+                            <a href="/api/information/<?php echo $name;  ?>/<?php echo "history" ?>/3/<?php echo date('Y-m-d', strtotime("-1 days")); ?>">
+                                History
+                            </a>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5 class="name font-italic">
+                            <a href="/api/information/<?php echo $name; ?>/<?php echo "timezone" ?>/4">
+                                Time Zone
+                            </a>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5 class="name font-italic">
+                            <a href="/api/information/<?php echo $name; ?>/<?php echo "sports" ?>/5">
+                                Sports
+                            </a>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5 class="name font-italic">
+                            <a href="/api/information/<?php  echo $name; ?>/<?php echo "astronomy" ?>/6">
+                                Astronomy
+                            </a>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5 class="name font-italic">
+                            <a href="/api/information/<?php echo $name; ?>/<?php echo "forecast" ?>/7">
+                                Weather Alerts
+                            </a>
+                        </h5>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <h5 class="name font-italic">
+                            <a href="#">
+                                Air Quality
+                            </a>
+                        </h5>
+                    </td>
+
+                </tr>
+            <?php } ?>
+        </tbody>
+    </table>
+<?php
+}
+
+?>

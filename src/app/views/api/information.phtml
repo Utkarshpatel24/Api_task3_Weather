@@ -5,7 +5,7 @@
     <h5 class="card-title fs-3">Current Weather Detail</h5>
     <p class="card-text">Current Weather Details are as follows.</p>
     <p class="card-text">Current Temperatre = <?php echo $details['current']['temp_c'] ?></p>
-    <p class="card-text">Temperatre will fall to = <?php echo $details['current']['temp_f'] ?></p>
+    <p class="card-text">Humidity = <?php echo $details['current']['humidity'] ?></p>
     <p class="card-text">Weather = <?php echo $details['current']['condition']['text'] ?></p>
     <p class="card-text">Wind Speed = <?php echo $details['current']['wind_kph'] ?></p>
     <p class="card-text">Wind Direction = <?php echo $details['current']['wind_dir'] ?></p>
@@ -13,7 +13,7 @@
   </div>
 </div>
 <div class="card bg-success text-white" style="width: 18rem;display:<?php if($disp == 2)echo "block";else echo "none"; ?>;margin:50px;padding:30px;border-radius:20px">
-  <img class="card-img-top" src="..." alt="Card image cap">
+  <img class="card-img-top" src="https://cdn5.vectorstock.com/i/1000x1000/61/19/weather-forecast-concept-woman-forecasting-vector-27466119.jpg" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">Forecast Weather Detail</h5>
     <p class="card-text">Forecast Weather Details are as follows.</p>
@@ -26,7 +26,7 @@
   </div>
 </div>
 <div class="card bg-success text-white" style="width: 18rem;display:<?php if($disp == 3)echo "block";else echo "none"; ?>;margin:50px;padding:30px;border-radius:20px">
-  <img class="card-img-top" src="..." alt="Card image cap">
+  <img class="card-img-top" src="https://cdn5.vectorstock.com/i/1000x1000/61/19/weather-forecast-concept-woman-forecasting-vector-27466119.jpg" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">Yesterday Weather Detail</h5>
     <p class="card-text">Yesterday Weather Details are as follows.</p>
@@ -39,7 +39,7 @@
   </div>
 </div>
 <div class="card bg-success text-white" style="width: 18rem;display:<?php if($disp == 4)echo "block";else echo "none"; ?>;margin:50px;padding:30px;border-radius:20px">
-  <img class="card-img-top" src="..." alt="Card image cap">
+  <img class="card-img-top" src="https://media.gettyimages.com/vectors/vector-world-time-zones-vector-id468369629?s=170667a" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">Time Zone</h5>
     <p class="card-text">Time Zone Details are as follows : </p>
@@ -95,7 +95,22 @@
     <a href="/api" class="btn btn-primary">Go back</a>
   </div>
 </div>
+<div class="card  bg-success text-white" style="width: 30rem;display:<?php if($disp == 8 )echo "block";else echo "none"; ?>;margin:50px;padding:30px;border-radius:20px">
+  <img class="card-img-top" src="http://cleanairpartners.net/sites/default/files/aqi-index.jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title fs-3">Air Quality</h5>
+    <p class="card-text">Air Quality are as follows : </p>
+    <p class="card-text">CO = <?php echo $details['current']['air_quality']['co'] ?></p>
+    <p class="card-text">NO2 = <?php echo $details['current']['air_quality']['no2'] ?></p>
+    <p class="card-text">O3 = <?php echo $details['current']['air_quality']['o3'] ?></p>
+    <p class="card-text">PM2_5 = <?php echo $details['current']['air_quality']['pm2_5']  ?></p>
+    <p class="card-text">PM10 = <?php echo $details['current']['air_quality']['pm10'] ?></p>
+    <p class="card-text">us-epa-index = <?php echo $details['current']['air_quality']['us-epa-index'] ?></p>
+    <p class="card-text">gb-defra-index = <?php echo $details['current']['air_quality']['gb-defra-index'] ?></p>
+    <a href="/api" class="btn btn-primary">Go back</a>
+  </div>
+</div>
 <?php
-// echo "<pre>";
-// print_r($details);
+echo "<pre>";
+print_r($details);
 ?>
